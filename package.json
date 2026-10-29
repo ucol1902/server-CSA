@@ -1,0 +1,14 @@
+{
+  "name": "selesaisurvei-server-lokal",
+  "version": "1.0.0",
+  "description": "Server lokal mandiri untuk dashboard SelesaiSurvei CSA dengan database Excel",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "xlsx": "^0.18.5"
+  }
+}
