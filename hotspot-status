@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome To PLN UPT JAMBI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main2.css">
+    <!--===============================================================================================-->
+</head>
+<script language="JavaScript">
+    <!--
+    $(if advert-pending == 'yes')
+        var popup = '';
+    function focusAdvert() {
+        if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+        popup = open('$(link-advert)', 'hotspot_advert', '');
+        setTimeout("focusAdvert()", 1000);
+    }
+    $(endif)
+    function openLogout() {
+        if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+        window.close();
+        return false;
+    }
+    //-->
+</script>
+<body $(if advert-pending == 'yes')
+onLoad="openAdvert()"
+$(endif)>
+<div class="content" style="margin-top: 130px">
+    <div class="row">
+        <div class="col-lg-6">
+            <div style="margin-left: 10px">
+
+                <h3>Selamat Datang</h3>
+                $(if login-by == 'trial')
+                Welcome trial user!
+                $(elif login-by != 'mac')
+                <h3>$(username), Selamat Bekerja</h3>
+                $(endif)
+                <hr>
+                <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>IP Address</td>
+                            <td></td>
+                            <td>$(ip)</td>
+                        </tr>
+                        <tr>
+                            <td>Up/Down</td>
+                            <td>:</td>
+                            <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                        </tr>
+                        <tr>
+                            <td>Uptime</td>
+                            <td>:</td>
+                            <td>$(uptime)</td>
+                        </tr>
+                        </thead>
+                    </table>
+                    $(if login-by-mac != 'yes')
+                    <input class="btn btn-primary" type="submit" value="log off">
+                </form>
+                $(endif)
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <h3>Alamat Aplikasi di PLN UPT JAMBI</h3>
+            <hr>
+            <div class="tabel" style="height:400px; overflow: auto; ">
+                <table class="table-bordered table">
+                    <thead>
+                    <tr style="background-color: #19a1bb">
+                        <th>APLIKASI</th>
+                        <th>APLIKASI</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="https://webmail.pln.co.id/" target="_blank"><img src="images/iconlink/webmail.PNG" style="width: 30px" alt=""> <b>EMAIL CORPORATE</b> <b style="color: #19a1bb"></b> </a></td>
+                        <td><a href="http://lis.pln.co.id" target="_blank"> <img src="images/iconlink/LIS.png" style="width: 100px" alt=""> <b>LIS</b> <b style="color: #19a1bb">  </b> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="https://amskorporat.pln.co.id" target="_blank"><img src="images/iconlink/AMS.PNG" style="width: 30px" alt=""><b>AMS KORPORAT</b></a></td>
+                        <td><a href="http://catalyst.pln.co.id/" target="_blank"> <img src="images/iconlink/CATALYST.png" style="width: 100px" alt=""> <b>CATALYST</b> <b style="color: #19a1bb">  </b> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="http://jalur-eam.pln.co.id/" target="_blank"><img src="images/iconlink/JALUR.png" style="width: 100px" alt=""> <b>JALUR EAM</b></a> </td>
+                        <td><a href="https://budaya.pln.co.id/auth/login" target="_blank"> <img src="images/iconlink/KOMANDO.PNG" style="width: 100px" alt=""><b>KOMANDO</b> </a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="https://hsse.pln.co.id" target="_blank"><img src="images/iconlink/HSSE.png" style="width: 100px" alt=""> <b>HSSE</b></a></td>
+                        <td> <a href="http://hxms.pln.co.id" target="_blank"><img src="images/iconlink/HXMS.png" style="width: 100px" alt=""> <b>HXMS</b></a> </td>
+                    </tr>
+                    <tr>
+                        <td> <a href="http://cbm-eam.pln.co.id" target="_blank"><img src="images/iconlink/CBM.png" style="width: 100px" alt=""> <b>CBM-EAM</b></a>  </td>
+                        <td> <a href="http://erpappw1.pusat.corp.pln.co.id/irj/portal" target="_blank"><img src="images/iconlink/SAP_2011_logo.svg" style="width: 30px" alt=""> <b style="color: #19a1bb"> ESS </b></a> </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/daterangepicker/moment.min.js"></script>
+<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+<script type="text/javascript">
+    <!--
+    document.login.username.focus();
+    //-->
+</script>
+</body>
+</html>
